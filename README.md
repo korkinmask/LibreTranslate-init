@@ -10,7 +10,7 @@ Uses WSGI with [Gunicorn and Nginx](https://www.digitalocean.com/community/tutor
 
 
 # Download LibreTranslate-init
-git clone https://github.com/argosopentech/LibreTranslate-init.git ~/LibreTranslate-init
+git clone https://github.com/korkinmask/LibreTranslate-init.git ~/LibreTranslate-init
 
 # Download dependencies and run LibreTranslate on port 5000
 ~/LibreTranslate-init/setup.sh
