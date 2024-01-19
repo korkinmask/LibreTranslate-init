@@ -15,16 +15,9 @@ git clone https://github.com/korkinmask/LibreTranslate-init.git ~/LibreTranslate
 # Download dependencies and run LibreTranslate on port 5000
 ~/LibreTranslate-init/setup.sh
 
-# Set server_name to your domain name in ~/LibreTranslate-init/nginx
-
 # Run LibreTranslate WSGI with nginx and systemd
 ~/LibreTranslate-init/run.sh
 
-# Check LibreTranslate status
-sudo systemctl status libretranslate
-
-# Enable https
-~/LibreTranslate-init/get-cert.sh
 
 ```
 

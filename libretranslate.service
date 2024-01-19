@@ -1,17 +1,11 @@
 [Unit]
-Description=LibreTranslate WSGI with Gunicorn and Nginx
-After=network.target
+Description=LibreTranslate
+After=multi-user.target
 
 [Service]
-User=root
-Group=www-data
-WorkingDirectory=/root/LibreTranslate
-Environment="PATH=/root/LibreTranslate/env/bin"
-ExecStart=/root/LibreTranslate/env/bin/gunicorn --workers 3 --bind unix:libretranslate.sock -m 007 wsgi:app
+Type=simple
 Restart=always
-ExecReload=/bin/kill -s HUP $MAINPID
-KillMode=mixed
-TimeoutStopSec=1
+ExecStart=/root/LibreTranslate/env/bin/python3 /root/LibreTranslate/main.py
 
 [Install]
 WantedBy=multi-user.target

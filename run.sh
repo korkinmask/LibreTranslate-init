@@ -1,7 +1,8 @@
 # Setup systemd
 sudo cp ~/LibreTranslate-init/libretranslate.service /etc/systemd/system/
-sudo systemctl start libretranslate
-sudo systemctl enable libretranslate
+sudo systemctl daemon-reload
+sudo systemctl enable libretranslate.service
+sudo systemctl start libretranslate.service
 # sudo systemctl status libretranslate
 
 # Configure Nginx

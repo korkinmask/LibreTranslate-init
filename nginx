@@ -1,9 +1,16 @@
 server {
-    listen 80;
-    server_name localhost MY_IP_SERVER;
+    listen 80 default_server;
+    listen [::]:80 default_server;
+
+
+    server_name _;
 
     location / {
         include proxy_params;
-        proxy_pass http://unix:/root/LibreTranslate/libretranslate.sock;
+        proxy_pass http://localhost:5000;
+        proxy_set_header X-Forwarded-Host $server_name;
+        proxy_set_header X-Real-IP $remote_addr;
+        add_header P3P 'CP="ALL DSP COR PSAa PSDa OUR NOR ONL UNI COM NAV"';
+        add_header Access-Control-Allow-Origin *;
     }
 }
