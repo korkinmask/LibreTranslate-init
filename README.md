@@ -7,13 +7,7 @@ Uses WSGI with [Gunicorn and Nginx](https://www.digitalocean.com/community/tutor
 ## Install
 
 ```
-# Add libretranslate user
-useradd libretranslate
-mkdir /home/libretranslate
-chown libretranslate:libretranslate /home/libretranslate
-usermod -aG sudo libretranslate
-passwd -d libretranslate
-su libretranslate
+
 
 # Download LibreTranslate-init
 git clone https://github.com/argosopentech/LibreTranslate-init.git ~/LibreTranslate-init
