@@ -23,7 +23,6 @@ virtualenv ~/LibreTranslate/env
 
 # Install and run LibreTranslate on port 5000
 ~/LibreTranslate/env/bin/pip install ~/LibreTranslate/ --no-cache-dir
-~/LibreTranslate/env/bin/libretranslate
 
 # Setup systemd
 sudo cp ~/LibreTranslate-init/libretranslate.service /etc/systemd/system/
