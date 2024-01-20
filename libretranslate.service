@@ -5,7 +5,14 @@ After=multi-user.target
 [Service]
 Type=simple
 Restart=always
+Group=www-data
 ExecStart=/root/LibreTranslate/env/bin/python3 /root/LibreTranslate/main.py
+TasksMax=100
+Restart=always
+ExecReload=/bin/kill -s HUP $MAINPID
+KillMode=mixed
+TimeoutStopSec=1
+
 
 [Install]
 WantedBy=multi-user.target
